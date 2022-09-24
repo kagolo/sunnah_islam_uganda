@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>             
 <head>
-<title>The Free MusicX Website Template | Details :: w3layouts</title>
+<title>SUNNAH ISLAM MEDIA| Home</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
@@ -64,7 +64,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap" style="box-shadow: none;">
 		<nav>
 		  <ul class="sf-menu">
-		        <li class="current"><a href="index.html">Home</a></li>
+		        <li class="current"><a href="{% url 'All_islam' %}">Home</a></li>
 		        <li><a href="specials.html">Specials</a></li>
 		        <li class="sub-menu"><a href="artists.html">Artists</a>
 		        	<ul>
@@ -94,7 +94,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="special">
 			<div class="single">
 				<div class="grid-img1">
-					<a href="#"><img src="{{ favorite_detail.lecture_image.url }}"></a> 
+					<img src="{{ get_shk.lecture_image.url }}">
 				</div>
 				<div class="para">
 					<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
@@ -109,9 +109,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   	</div>
 			   <div class="clear"></div>	
 		   </div>
-	   <div class="text-h1 top">
-			<h2>Lorem ipsum quis nostrud exercitation</h2>
-	  	</div>
+	   
 	 <div class="div2">
         <div id="mcts1">
         	<img src="{% static 'images/pic4.jpg' %}" alt=""/>
@@ -170,7 +168,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <div class="footer1-bg">
 	<div class="copy">
-		<p>© 2013 Musicx . All rights Reserved | Design by &nbsp;<a href="http://w3layouts.com">W3Layouts</a></p>
+		<p>© Sunnah Islam Media. All rights reserved | Design by <a href="#"> Usak.designs.</a></p>
 	</div>	
 </div>
 </div>

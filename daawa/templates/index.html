@@ -24,7 +24,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="header">
 		<div class="header_top">
 			<div class="logo">
-				<a href="index.html"><img src="{% static 'images/sunnahlogo.png' %}" alt="" /></a>
+				<a href="{% url 'All_islam' %}"><img src="{% static 'images/sunnahlogo.png' %}" alt="" /></a>
 			</div>
 			  <div class="header_top_right">
 			    <div class="search_box">
@@ -227,109 +227,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <h4>No Data available</h4>
                 </div>
                 {%endif%}
-			<h2 class="bg">Our Specials</h2>
-			<div class="section group">
-				<div class="grid_1_of_3 images_1_of_3">
-					<a href="details.html"><img src="{% static 'images/pic8.jpg' %}" alt=""></a>
-					 <a href="details.html"><h3>Lorem Ipsum</h3></a>
-					<span class="price"><sup>$12.31</sup><sub>pm</sub></span>
-				     <div class="btn">
-				     	<a href="details.html">Add to Cart</a>
-				     </div>
-				</div>
-				<div class="grid_1_of_3 images_1_of_3">
-					  <a href="details.html"><img src="{% static 'images/pic10.jpg' %}" alt=""></a>
-					  <a href="details.html"><h3>Lorem Ipsum</h3></a>
-					<span class="price"><sup>$69.66</sup><sub>pm</sub></span>
-			        <div class="btn">
-				     	<a href="details.html">Add to Cart</a>
-				     </div>
-				</div>
-				<div class="grid_1_of_3 images_1_of_3">
-					 <a href="details.html"><img src="{% static 'images/pic11.jpg' %}" alt=""></a>
-					  <a href="details.html"><h3>Lorem Ipsum</h3></a>
-					 <span class="price"><sup>$31.21</sup><sub>pm</sub></span>
-			       <div class="btn">
-				     	<a href="details.html">Add to Cart</a>
-				     </div>
-				</div>
-				<div class="grid_1_of_3 images_1_of_3">
-					  <a href="details.html"><img src="{% static 'images/pic12.jpg' %}" alt=""></a>
-					  <a href="details.html"><h3>Lorem Ipsum</h3></a>
-					<span class="price"><sup>$69.66</sup><sub>pm</sub></span>
-				        <div class="btn">
-				     	<a href="details.html">Add to Cart</a>
-				     </div>
-				</div>	
-				<div class="clear"></div>
-			</div>
+			
 </div>
 
-{%if get_islam_serie %}
+{%if get_all_shks %}
 <div class="cont-right">
 	<h2>Sunnah Serie Lectures</h2>
-	{% for get_islam_serie in get_islam_serie %}
+	{% for get_all_shks in get_all_shks %}
 	<div class="sidebar-right">
 	   <div class="listimg listimg_1_of_2">
-		<a href="{% url 'islam_serie_detail'  get_islam_serie.id %}"><img src="{{ get_islam_serie.serie_lecture_image.url }}" alt="" /></a>	
+		<a href="{% url 'one_sheikh_detail'  get_all_shks.id %}"><img src="{{ get_all_shks.lecture_image.url }}" alt="" /></a>	
 	   </div>
 	<div class="text1 list_1_of_2">
 	  <div class="extra-wrap1">
-          <a href="#" class="link4">{{ get_islam_serie.sheikh_name}}</a><br>
-          <span class="color1">{{ get_islam_serie.serie_lecture_date}}</span><br>
+          <a href="#" class="link4">{{ get_all_shks.sheikh_name}}</a><br>
+          <span class="color1">{{ get_all_shks.lecture_name}}</span><br>
           Genre: <a href="#" class="color2">duis</a> / <a href="#" class="color2">soluta nobis</a><br>
           <span class="link-top">Actors: <a href="#" class="color2">Conse ctetur,<br>{{ get_islam_serie.serie_lecture_name}}</a> </span> 
       </div>
     </div>
 	<div class="clear"></div>
-	</div> 
+    </div> 
 	{% endfor %}
-	
-	<div class="sidebar-right">
-		<div class="listimg listimg_1_of_2">
-			 <img src="{% static 'images/pic8.jpg' %}" alt="">
-		</div>
-		<div class="text1 list_1_of_2">
-		 <div class="extra-wrap1">
-            <a href="#" class="link4">augue duis dolore</a><br>
-            <span class="color1">USA (2013)</span><br>
-                                        Genre: <a href="#" class="color2">duis</a> / <a href="#" class="color2">soluta nobis</a><br>
-                                        <span class="link-top">Actors: <a href="#" class="color2">Conse ctetur,<br>dolore eu feugiat nulla</a> </span> 
-                                    </div>
-					</div>
-					<div class="clear"></div>
-				</div>
-					
-					<div class="sidebar-right">
-					<div class="listimg listimg_1_of_2">
-						 <img src="{% static 'images/pic3.jpg' %}" alt="">
-					</div>
-					<div class="text1 list_1_of_2">
-						  <div class="extra-wrap1">
-                                        <a href="#" class="link4">augue duis dolore</a><br>
-                                        <span class="color1">USA (2013)</span><br>
-                                        Genre: <a href="#" class="color2">duis</a> / <a href="#" class="color2">soluta nobis</a><br>
-                                        <span class="link-top">Actors: <a href="#" class="color2">Conse ctetur,<br>dolore eu feugiat nulla</a> </span> 
-                                    </div>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<div class="sidebar-right">
-					<div class="listimg listimg_1_of_2">
-						 <img src="{% static 'images/pic12.jpg' %}" alt="">
-					</div>
-					<div class="text1 list_1_of_2">
-						  <div class="extra-wrap1">
-                                        <a href="#" class="link4">augue duis dolore</a><br>
-                                        <span class="color1">USA (2013)</span><br>
-                                        Genre: <a href="#" class="color2">duis</a> / <a href="#" class="color2">soluta nobis</a><br>
-                                        <span class="link-top">Actors: <a href="#" class="color2">Conse ctetur,<br>dolore eu feugiat nulla</a> </span> 
-                                    </div>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<a href="#" class="link2">See all</a>
-				</div>	
+				
+	<a href="#" class="link2">See all</a>
+</div>	
 	<div class="clear"></div>
 </div>
 {%else%}
@@ -361,7 +283,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <div class="footer1-bg">
 	<div class="copy">
-		<p>© 2013 Musicx . All rights Reserved | Design by &nbsp;<a href="http://w3layouts.com">W3Layouts</a></p>
+		<p>© 2022 Sunnah Islam Media. All rights reserved | Design by <a href="#"> Usak.designs.</a></p>
 	</div>	
 </div>
 </div>
