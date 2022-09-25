@@ -50,9 +50,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</select>
 		</div>
 	   <div class="login">
-		   	   <span><a href="login.html"><img src="images/login.png" alt="" title="login"/></a></span>
+		   	   <span><a href="#"><img src="{% static 'images/login.png' %}" alt="" title="login"/></a></span>
 		   </div>
-		 <div class="clear"></div>
+		 <div class="clear"></div>   
 	 </div>
 	 <div class="clear"></div>
  </div>                           
@@ -71,7 +71,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<h2>Lorem ipsum</h2>
 						<p>Lorem ipsum dolor amet sed eiusmod.</p>
 						<span class="price"><sup>$21.00&nbsp;</sup><sub>pm</sub></span>
-						<div class="button"><span><a href="details.html">Add to cart</a></span></div>
+						<div class="button"><span><a href="#">Add to cart</a></span></div>
 				   </div>
 			   </div>	
 			   {% endfor %}		
@@ -168,26 +168,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap" style="box-shadow: none;">
 		<nav>
 		  <ul class="sf-menu">
-		        <li class="current"><a href="index.html">Home</a></li>
-		        <li><a href="specials.html">Specials</a></li>
-		        <li class="sub-menu"><a href="artists.html">Quran</a>
+		        <li class="current"><a href="{% url 'All_islam' %}">Home</a></li>
+		        <li><a href="{% url 'specials' %}">Specials</a></li>
+		        <li class="sub-menu"><a href="{% url 'quran' %}">Quran</a>
 		        	<ul>
-		                <li><a href="artists.html">Artists 01</a></li>
-		               <li><a href="artists.html">Artists 02</a></li>
-		                <li class="last3 sub-menu"><a href="artists.html">Artists 03</a>
+		                <li><a href="{% url 'quran' %}">Artists 01</a></li>
+		               <li><a href="{% url 'quran' %}">Artists 02</a></li>
+		                <li class="last3 sub-menu"><a href="{% url 'quran' %}">Artists 03</a>
 		                </li>
 		            </ul>
 		        </li>
-		        <li><a href="contact.html">Contact</a></li>
+		        <li><a href="{% url 'contact' %}">Contact</a></li>
 		    </ul>
 		    <div class="clear"></div>
 		</nav>
-		<div class="soc-icons">
+		<div class="soc-icons">     
 		<ul>
 			<li><a href="">Get In Touch&nbsp;</a></li>
-			<li><a href=""><img src="images/facebook.png" alt=""></a></li>
-			<li><a href=""><img src="images/twitter.png" alt=""></a></li>
-	    	<li><a href=""><img src="images/rss.png" alt=""></a></li>
+			<li><a href=""><img src="{% static 'images/facebook.png' %}" alt=""></a></li>
+			<li><a href=""><img src="{% static 'images/twitter.png' %}" alt=""></a></li>
+	    	<li><a href=""><img src="{% static 'images/rss.png' %}" alt=""></a></li>
 		</ul>
 	</div>
 	<div class="clear"></div>
@@ -199,11 +199,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="sidebar-list">
 		<h2>Sunnah Categories</h2>
 			<ul>
-				<li><a href="#">Sunnah Islam Media Audios</a></li>
+				<li><a href="{% url 'audios' %}">Sunnah Islam Media Audios</a></li>
 				<li><a href="#">Register </a></li>
 				<li><a href="#">Login</a></li>
 				<li><a href="#">Logout</a></li>
-				<li><a href="#">About Us </a></li>
+				<li><a href="{% url 'contact' %}">About Us </a></li>
 		   </ul>
 	</div>
 	</div>
@@ -214,8 +214,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				{% for get_all_shks in get_all_shks %}
 				<div class="grid_1_of_3 images_1_of_3">
 					<a href="{% url 'one_sheikh_detail'  get_all_shks.id %}"><img src="{{ get_all_shks.lecture_image.url }}" alt="" /></a>
-					<a href="details.html"><h3>{{ get_all_shks.sheikh_name}}</h3></a> 
-					<a href="details.html"><h3>{{ get_all_shks.lecture_name}}</h3></a>
+					<a href="#"><h3>{{ get_all_shks.sheikh_name}}</h3></a> 
+					<a href="#"><h3>{{ get_all_shks.lecture_name}}</h3></a>
 				     <span class="price">{{ get_all_shks.lecture_date}}</span>
 				     
 				</div>

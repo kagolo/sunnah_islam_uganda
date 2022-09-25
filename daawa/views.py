@@ -52,4 +52,16 @@ def manage_islam_serie_detail(request,serie_lecture_id):
     return render (request, "islam_series.html",context)
 
 def manage_quran(request):
-    return render (request,"artist.html")
+    return render (request,"quran.html")
+
+def manage_contact(request):
+    return render(request, "contact.html")
+
+def manage_episodes(request):
+    return render(request, "episodes.html")
+
+def manage_specials(request):
+    return render(request, "specials.html")
+
+def manage_audios(request):
+    return render(request, "audios.html")
